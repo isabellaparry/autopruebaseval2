@@ -1,22 +1,49 @@
-# Evaluación unidad 2 - Isabella Parry
+# Automatización de Pruebas
 
-Implementar un flujo básico de automatización de pruebas para un proyecto Java, utilizando Maven, JUnit, Git y GitHub Actions.
+## Descripción
+
+Este proyecto fue desarrollado para aplicar los contenidos de automatización de pruebas, control de versiones, integración continua, BDD y pruebas de rendimiento.
+
+Se utilizó Java como lenguaje principal, Maven para la gestión del proyecto, JUnit para pruebas unitarias, Cucumber para BDD, GitHub Actions para integración continua y JMeter para pruebas básicas de performance.
+
+---
 
 ## Tecnologías utilizadas
 
 - Java 17
-- Apache Maven
+- Maven
 - JUnit 5
-- Git
-- GitHub
+- Cucumber
+- Git y GitHub
 - GitHub Actions
+- Apache JMeter
 - Visual Studio Code
+
+---
 
 ## Estructura del proyecto
 
 ```text
-src/
-├── main/java/cl/iplacex/
-│   └── Calculadora.java
-└── test/java/cl/iplacex/
-    └── CalculadoraTest.java
+automatizacion-pruebas/
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── docs/
+│   ├── three-amigos.md
+│   └── dashboard.md
+├── performance/
+│   └── prueba-performance.jmx
+├── src/
+│   ├── main/java/cl/iplacex/
+│   │   ├── Calculadora.java
+│   │   └── LoginService.java
+│   └── test/
+│       ├── java/cl/iplacex/
+│       │   ├── CalculadoraTest.java
+│       │   ├── RunCucumberTest.java
+│       │   └── steps/LoginSteps.java
+│       └── resources/features/
+│           └── login.feature
+├── .gitignore
+├── pom.xml
+└── README.md

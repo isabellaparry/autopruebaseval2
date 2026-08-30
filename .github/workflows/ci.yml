@@ -30,9 +30,12 @@ jobs:
       - name: Compilar y ejecutar pruebas
         run: mvn clean test
 
-      - name: Publicar resultados de pruebas
+      - name: Publicar reportes de pruebas
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: resultados-pruebas
-          path: target/surefire-reports/
+          name: reportes-pruebas
+          path: |
+            target/surefire-reports/
+            target/cucumber-report.html
+            target/cucumber.json
